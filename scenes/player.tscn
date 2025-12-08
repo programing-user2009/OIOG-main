@@ -1,0 +1,149 @@
+[gd_scene load_steps=18 format=3 uid="uid://d3xmeatdv1lf4"]
+
+[ext_resource type="Texture2D" uid="uid://cv1vppfp71cqh" path="res://assets/photos/Enitiys/pixil-frame-0 (6).png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://bq660dirdsld8" path="res://scrips/Player.gd" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://bixe061dkl17" path="res://scenes/in_game_ui.tscn" id="2_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://bewy5c8a6nod7" path="res://scenes/abilities_func.tscn" id="2_qlg0r"]
+[ext_resource type="PackedScene" uid="uid://bdnbqca6fgrvi" path="res://scenes/hp_func.tscn" id="2_tuyoq"]
+[ext_resource type="PackedScene" uid="uid://b3pg1hv8pd7of" path="res://scenes/movement_func.tscn" id="3_qlg0r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(330, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(220, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(110, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(0, 0, 110, 110)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_smehm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(440, 220, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(440, 110, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(440, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(110, 440, 110, 110)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jej6c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}],
+"loop": true,
+"name": &"1_4 hp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}],
+"loop": true,
+"name": &"2_4 hp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2wvv")
+}],
+"loop": true,
+"name": &"3_4 hp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v2ag")
+}],
+"loop": true,
+"name": &"full hp",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
+radius = 50.01
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("PlayerAbilities", "PlayerMovement")]
+texture_filter = 1
+script = ExtResource("1_g2els")
+PlayerAbilities = NodePath("AbilitiesFunc")
+PlayerMovement = NodePath("MovementFunc")
+
+[node name="HPFunc" parent="." instance=ExtResource("2_tuyoq")]
+
+[node name="AbilitiesFunc" parent="." node_paths=PackedStringArray("MovementFunc") instance=ExtResource("2_qlg0r")]
+MovementFunc = NodePath("../MovementFunc")
+
+[node name="MovementFunc" parent="." instance=ExtResource("3_qlg0r")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="SoulAnim" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_smehm")
+animation = &"up"
+
+[node name="hp_check" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jej6c")
+animation = &"full hp"
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_g2els")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="In_Game_UI" parent="Camera2D" instance=ExtResource("2_qhqgy")]
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+size_flags_horizontal = 0
+size_flags_vertical = 4

@@ -1,0 +1,1656 @@
+[gd_scene load_steps=74 format=3 uid="uid://bixe061dkl17"]
+
+[ext_resource type="Script" uid="uid://dgh4iu306f3ej" path="res://scrips/UI scripts/menu_manage.gd" id="1_276nr"]
+[ext_resource type="Texture2D" uid="uid://bj5flqxl4w0h8" path="res://assets/photos/create_UI/pixil-frame-0 (10).png" id="2_fqvwy"]
+[ext_resource type="Texture2D" uid="uid://b3m8bgbh2ci0x" path="res://assets/photos/create_UI/pixil-frame-0 (13).png" id="3_fqvwy"]
+[ext_resource type="Texture2D" uid="uid://8lt0d04qsl6a" path="res://assets/photos/create_UI/pixil-frame-0 (12).png" id="4_ria60"]
+[ext_resource type="Script" uid="uid://2yrly1ena12o" path="res://scrips/UI scripts/stats.gd" id="5_6qwj3"]
+[ext_resource type="Texture2D" uid="uid://bnwl5130q6qas" path="res://assets/photos/create_UI/pixil-frame-0 (16).png" id="5_qinws"]
+[ext_resource type="Texture2D" uid="uid://c18lh6dmcx4fg" path="res://assets/photos/create_UI/pixil-frame-0 (15).png" id="6_jlb72"]
+[ext_resource type="Texture2D" uid="uid://ddlgpy8j1kqci" path="res://assets/photos/items/pixil-frame-0 (37).png" id="8_4t0bi"]
+[ext_resource type="Texture2D" uid="uid://dajudjt7spw5u" path="res://assets/photos/items/pixil-frame-0 (38).png" id="9_1dbqd"]
+[ext_resource type="Texture2D" uid="uid://ccilq8r533lgn" path="res://assets/photos/items/pixil-frame-0 (39).png" id="10_ooism"]
+[ext_resource type="Texture2D" uid="uid://dsnircseegjx0" path="res://assets/photos/create_UI/pixil-frame-0 (28).png" id="10_ve7rr"]
+[ext_resource type="Texture2D" uid="uid://c6uhhbqmkgbi" path="res://assets/photos/create_UI/pixil-frame-0 (29).png" id="11_luu0w"]
+[ext_resource type="Texture2D" uid="uid://dfp4fqo2i3xcn" path="res://assets/photos/items/pixil-frame-0 (40).png" id="11_qp34s"]
+[ext_resource type="Texture2D" uid="uid://b3omvuxhxaggb" path="res://assets/photos/create_UI/pixil-frame-0 (31).png" id="12_gxplc"]
+[ext_resource type="Texture2D" uid="uid://c8dl1cxlkrpha" path="res://assets/photos/items/pixil-frame-0 (41).png" id="12_qmbi5"]
+[ext_resource type="Script" uid="uid://cj8pvgtlvxvm3" path="res://scrips/UI scripts/AbilitiesMenu.gd" id="12_ve7rr"]
+[ext_resource type="Texture2D" uid="uid://cv1vppfp71cqh" path="res://assets/photos/Enitiys/pixil-frame-0 (6).png" id="13_luu0w"]
+[ext_resource type="Texture2D" uid="uid://b3pt7w62kweug" path="res://assets/photos/create_UI/pixil-frame-0 (30).png" id="13_mv4mu"]
+[ext_resource type="Texture2D" uid="uid://bila4t45k8ixr" path="res://assets/photos/items/pixil-frame-0 (42).png" id="13_yhgpc"]
+[ext_resource type="Script" uid="uid://clgjeutvvj7ir" path="res://scrips/UI scripts/ItemDisciptionUI.gd" id="20_1dbqd"]
+[ext_resource type="VideoStream" uid="uid://bc2b3pqe4yq5s" path="res://assets/photos/items/ItemVideos/Fallen_Kingdom__-_A_Minecraft_Parody_of_Coldplays_Viva_la_Vida_Music_Video.ogv" id="21_ooism"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_huati"]
+texture = ExtResource("4_ria60")
+region_rect = Rect2(20, 0, 110, 10)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a45jx"]
+texture = ExtResource("3_fqvwy")
+region_rect = Rect2(20, 20, 150, 150)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jlb72"]
+texture = ExtResource("2_fqvwy")
+region_rect = Rect2(520, 10, 150, 150)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yjjyl"]
+texture = ExtResource("5_qinws")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ria60"]
+texture = ExtResource("6_jlb72")
+region_rect = Rect2(0, 0, 150, 150)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6qwj3"]
+texture = ExtResource("3_fqvwy")
+region_rect = Rect2(700, 530, 150, 150)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_04xgm"]
+texture = ExtResource("4_ria60")
+region_rect = Rect2(0, 0, 150, 150)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_276nr"]
+texture = ExtResource("3_fqvwy")
+region_rect = Rect2(360, 20, 150, 150)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qinws"]
+texture = ExtResource("2_fqvwy")
+region_rect = Rect2(690, 10, 150, 150)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6o5v6"]
+texture = ExtResource("8_4t0bi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kikax"]
+texture = ExtResource("9_1dbqd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cjqdp"]
+texture = ExtResource("10_ooism")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ay2qe"]
+texture = ExtResource("11_qp34s")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_05wmb"]
+texture = ExtResource("12_qmbi5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2q1wq"]
+texture = ExtResource("13_yhgpc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y1m1a"]
+texture = ExtResource("3_fqvwy")
+region_rect = Rect2(530, 20, 150, 150)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5gssk"]
+texture = ExtResource("2_fqvwy")
+region_rect = Rect2(350, 10, 150, 150)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4t0bi"]
+texture = ExtResource("10_ve7rr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1dbqd"]
+texture = ExtResource("11_luu0w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ooism"]
+texture = ExtResource("12_gxplc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qp34s"]
+texture = ExtResource("13_mv4mu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gxplc"]
+texture = ExtResource("3_fqvwy")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+region_rect = Rect2(700, 190, 151, 151)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mv4mu"]
+texture = ExtResource("2_fqvwy")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+region_rect = Rect2(10, 10, 150, 150)
+
+[sub_resource type="Theme" id="Theme_y1m1a"]
+Button/styles/hover = SubResource("StyleBoxTexture_gxplc")
+Button/styles/normal = SubResource("StyleBoxTexture_mv4mu")
+Button/styles/pressed = SubResource("StyleBoxTexture_gxplc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qmbi5"]
+texture = ExtResource("13_luu0w")
+region_rect = Rect2(250, 140, 50, 50)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yhgpc"]
+texture = ExtResource("13_luu0w")
+region_rect = Rect2(140, 140, 50, 50)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6kq67"]
+texture = ExtResource("13_luu0w")
+region_rect = Rect2(30, 140, 50, 50)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o0vul"]
+texture = ExtResource("13_luu0w")
+region_rect = Rect2(360, 140, 50, 50)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ve7rr"]
+texture = ExtResource("3_fqvwy")
+region_rect = Rect2(700, 190, 150, 150)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_luu0w"]
+texture = ExtResource("2_fqvwy")
+region_rect = Rect2(10, 10, 150, 150)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7iid"]
+texture = ExtResource("12_gxplc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vdxtc"]
+texture = ExtResource("13_mv4mu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xcrmj"]
+texture = ExtResource("8_4t0bi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5mjpd"]
+texture = ExtResource("9_1dbqd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uv8ux"]
+texture = ExtResource("10_ooism")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jau4j"]
+texture = ExtResource("11_qp34s")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b7s6h"]
+texture = ExtResource("12_qmbi5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bere0"]
+texture = ExtResource("13_yhgpc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j57om"]
+texture = ExtResource("13_mv4mu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oeh2r"]
+texture = ExtResource("12_gxplc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_174i7"]
+texture = ExtResource("3_fqvwy")
+region_rect = Rect2(700, 190, 150, 150)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gc623"]
+texture = ExtResource("2_fqvwy")
+region_rect = Rect2(10, 10, 150, 150)
+
+[sub_resource type="Animation" id="Animation_luu0w"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_4t0bi"]
+resource_name = "close_AbilitiesMenu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AbilitiesMenu/NinePatchRect/AbilitiesMainUI:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AbilitiesMenu/NinePatchRect:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(400, 648), Vector2(0, 648), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AbilitiesMenu/NinePatchRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AbilitiesMenu/NinePatchRect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Menu/main menu/controls/NinePatchRect/menu items:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AbilitiesMenu:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Menu/main menu/controls/open or close:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_qp34s"]
+resource_name = "close_ItemDiscriptionMenu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ItemDiscriptionMenu/NinePatchRect/MainUI:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ItemDiscriptionMenu/NinePatchRect/MainUI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ItemDiscriptionMenu/NinePatchRect/MainUI:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(10, 10), Vector2(360, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ItemDiscriptionMenu:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ItemDiscriptionMenu:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(360, 0), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Menu/main menu/controls/NinePatchRect/menu items:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Menu/main menu/controls/NinePatchRect/menu items:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_gxplc"]
+resource_name = "close_Menu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Menu/main menu/controls/NinePatchRect:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(500, 250), Vector2(500, 0), Vector2(250, 0), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Menu/main menu/controls/NinePatchRect/menu items:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Menu/main menu/controls/open or close:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.20019, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Menu/main menu/controls/NinePatchRect:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0.301961)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Menu/main menu/controls/open or close:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.20019),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("on start menu screen/open or close:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.20019, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Menu/main menu/controls/NinePatchRect:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_y1m1a"]
+resource_name = "close_SettingsMenu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu/main menu/controls/NinePatchRect/menu items:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Menu/main menu/controls/NinePatchRect/menu items:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.333333, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SettingsMenu/NinePatchRect/VBoxContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SettingsMenu/NinePatchRect/VBoxContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SettingsMenu/NinePatchRect:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.0333333, 0.1, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(800, 500), Vector2(800, 0), Vector2(600, 0), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SettingsMenu/NinePatchRect:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SettingsMenu:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_5gssk"]
+resource_name = "open_AbilitiesMenu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AbilitiesMenu/NinePatchRect/AbilitiesMainUI:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AbilitiesMenu/NinePatchRect:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 648), Vector2(400, 648)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AbilitiesMenu/NinePatchRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Menu/main menu/controls/NinePatchRect/menu items:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AbilitiesMenu/NinePatchRect:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AbilitiesMenu:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Menu/main menu/controls/open or close:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ooism"]
+resource_name = "open_ItemDiscriptionMenu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ItemDiscriptionMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ItemDiscriptionMenu/NinePatchRect/MainUI:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ItemDiscriptionMenu:custom_minimum_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(360, 400)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ItemDiscriptionMenu/NinePatchRect/MainUI:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(360, 0), Vector2(10, 10)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ItemDiscriptionMenu/NinePatchRect/MainUI:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Menu/main menu/controls/NinePatchRect/menu items:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Menu/main menu/controls/NinePatchRect/menu items:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_ve7rr"]
+resource_name = "open_Menu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Menu/main menu/controls/NinePatchRect:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(250, 0), Vector2(500, 0), Vector2(500, 250)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Menu/main menu/controls/NinePatchRect/menu items:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Menu/main menu/controls/open or close:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.20019),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Menu/main menu/controls/NinePatchRect:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Menu/main menu/controls/open or close:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.20019, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("on start menu screen/open or close:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.20019),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Menu/main menu/controls/NinePatchRect:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Menu/main menu/controls/NinePatchRect/menu items:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mv4mu"]
+resource_name = "open_SettingsMenu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu/main menu/controls/NinePatchRect/menu items:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Menu/main menu/controls/NinePatchRect/menu items:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SettingsMenu/NinePatchRect/VBoxContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SettingsMenu/NinePatchRect/VBoxContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SettingsMenu/NinePatchRect:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.201212, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(600, 0), Vector2(800, 0), Vector2(800, 500)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SettingsMenu/NinePatchRect:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.005),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SettingsMenu:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SettingsMenu/NinePatchRect:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mv4mu"]
+_data = {
+&"RESET": SubResource("Animation_luu0w"),
+&"close_AbilitiesMenu": SubResource("Animation_4t0bi"),
+&"close_ItemDiscriptionMenu": SubResource("Animation_qp34s"),
+&"close_Menu": SubResource("Animation_gxplc"),
+&"close_SettingsMenu": SubResource("Animation_y1m1a"),
+&"open_AbilitiesMenu": SubResource("Animation_5gssk"),
+&"open_ItemDiscriptionMenu": SubResource("Animation_ooism"),
+&"open_Menu": SubResource("Animation_ve7rr"),
+&"open_SettingsMenu": SubResource("Animation_mv4mu")
+}
+
+[node name="In_Game_UI" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="popup menu" type="MarginContainer" parent="." node_paths=PackedStringArray("menu_screen", "menu_screen_showing", "settings_menu_screen", "abilities_menu_screen", "inventory_menu_screen", "open_menu_screen", "closed_menu_screen", "play_menu_screen", "inventory_menu_open", "powers_menu_screen", "setting_menu_screen", "quit_settings_screen", "save_settings_screen", "back_settings_screen")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -648.0
+offset_right = 576.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_276nr")
+menu_screen = NodePath("Menu")
+menu_screen_showing = NodePath("on start menu screen")
+settings_menu_screen = NodePath("SettingsMenu")
+abilities_menu_screen = NodePath("AbilitiesMenu")
+inventory_menu_screen = NodePath("ItemDiscriptionMenu")
+open_menu_screen = NodePath("on start menu screen/open or close")
+closed_menu_screen = NodePath("Menu/main menu/controls/open or close")
+play_menu_screen = NodePath("Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container/play")
+inventory_menu_open = NodePath("Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container/inventory")
+powers_menu_screen = NodePath("Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container/abilities")
+setting_menu_screen = NodePath("Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container/settings")
+quit_settings_screen = NodePath("SettingsMenu/NinePatchRect/VBoxContainer/buttens/quit")
+save_settings_screen = NodePath("SettingsMenu/NinePatchRect/VBoxContainer/buttens/save")
+back_settings_screen = NodePath("SettingsMenu/NinePatchRect/VBoxContainer/buttens/settings")
+
+[node name="Menu" type="VBoxContainer" parent="popup menu"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 30
+
+[node name="main menu" type="MarginContainer" parent="popup menu/Menu"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="controls" type="VBoxContainer" parent="popup menu/Menu/main menu"]
+layout_mode = 2
+
+[node name="open or close" type="Button" parent="popup menu/Menu/main menu/controls"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(35, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_huati")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_huati")
+theme_override_styles/normal = SubResource("StyleBoxTexture_huati")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popup menu/Menu/main menu/controls"]
+visible = false
+modulate = Color(0, 0, 0, 0.301961)
+layout_mode = 2
+size_flags_vertical = 8
+texture = ExtResource("2_fqvwy")
+region_rect = Rect2(10, 10, 150, 150)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="menu items" type="MarginContainer" parent="popup menu/Menu/main menu/controls/NinePatchRect"]
+visible = false
+layout_mode = 1
+offset_right = 501.0
+offset_bottom = 250.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="button container" type="HBoxContainer" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="play" type="Button" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_a45jx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a45jx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_jlb72")
+
+[node name="inventory" type="Button" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_yjjyl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yjjyl")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ria60")
+
+[node name="abilities" type="Button" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_6qwj3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6qwj3")
+theme_override_styles/normal = SubResource("StyleBoxTexture_04xgm")
+
+[node name="settings" type="Button" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_276nr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_276nr")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qinws")
+
+[node name="stats" type="HBoxContainer" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 25
+script = ExtResource("5_6qwj3")
+
+[node name="CoinsDisplay" type="Label" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/stats"]
+texture_filter = 2
+layout_mode = 2
+text = "coins: 50 "
+
+[node name="HPDisplay" type="Label" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/stats"]
+layout_mode = 2
+text = "hp: 4/4 "
+
+[node name="SoulDisplay" type="Label" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/stats"]
+layout_mode = 2
+text = "face/soul: blue"
+
+[node name="CoordinatesDisplay" type="Label" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/stats"]
+layout_mode = 2
+text = "coordinates: 1,1"
+
+[node name="ItemsQuickUse" type="ScrollContainer" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/ItemsQuickUse"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_stretch_ratio = 0.7
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Spin" type="Button" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/ItemsQuickUse/HBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_6o5v6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6o5v6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6o5v6")
+icon_alignment = 1
+
+[node name="AntiSpin" type="Button" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/ItemsQuickUse/HBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_kikax")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kikax")
+theme_override_styles/normal = SubResource("StyleBoxTexture_kikax")
+icon_alignment = 1
+
+[node name="BombTower" type="Button" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/ItemsQuickUse/HBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_cjqdp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cjqdp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cjqdp")
+icon_alignment = 1
+
+[node name="SpawnTower" type="Button" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/ItemsQuickUse/HBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_ay2qe")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ay2qe")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ay2qe")
+icon_alignment = 1
+
+[node name="Reset" type="Button" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/ItemsQuickUse/HBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_05wmb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_05wmb")
+theme_override_styles/normal = SubResource("StyleBoxTexture_05wmb")
+icon_alignment = 1
+
+[node name="AbilityBoost" type="Button" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/ItemsQuickUse/HBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_2q1wq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2q1wq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2q1wq")
+icon_alignment = 1
+
+[node name="seprator" type="Control" parent="popup menu/Menu"]
+layout_mode = 2
+
+[node name="on start menu screen" type="VBoxContainer" parent="popup menu"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 10
+
+[node name="open or close" type="Button" parent="popup menu/on start menu screen"]
+custom_minimum_size = Vector2(35, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_huati")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_huati")
+theme_override_styles/normal = SubResource("StyleBoxTexture_huati")
+
+[node name="seprator" type="Control" parent="popup menu/on start menu screen"]
+layout_mode = 2
+
+[node name="SettingsMenu" type="MarginContainer" parent="popup menu"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popup menu/SettingsMenu"]
+custom_minimum_size = Vector2(800, 500)
+layout_mode = 2
+texture = ExtResource("2_fqvwy")
+region_rect = Rect2(10, 10, 150, 150)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popup menu/SettingsMenu/NinePatchRect"]
+custom_minimum_size = Vector2(800, 500)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 20
+
+[node name="Control" type="Control" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="SoundLabel" type="Label" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "sound:"
+
+[node name="sound settings" type="HBoxContainer" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/sound settings"]
+layout_mode = 2
+text = "Subtitles:"
+
+[node name="CheckBox" type="CheckBox" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/sound settings"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/sound settings"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/sound settings"]
+layout_mode = 2
+text = "SFX:"
+
+[node name="HSlider" type="HSlider" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/sound settings"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_constants/grabber_offset = 0
+rounded = true
+scrollable = false
+
+[node name="Control2" type="Control" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/sound settings"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/sound settings"]
+layout_mode = 2
+text = "volume:"
+
+[node name="HSlider2" type="HSlider" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/sound settings"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_constants/grabber_offset = 0
+rounded = true
+scrollable = false
+
+[node name="KeybindingLabel" type="Label" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "Keybindings:"
+
+[node name="Keybindings" type="HBoxContainer" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/Keybindings"]
+layout_mode = 2
+text = "leave this here so i can suffer later :)"
+
+[node name="AccessibilityLabel" type="Label" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "Accessibility:"
+
+[node name="Accessibility settings" type="HBoxContainer" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/Accessibility settings"]
+layout_mode = 2
+text = "Colorblind mode:"
+
+[node name="OptionButton" type="OptionButton" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/Accessibility settings"]
+layout_mode = 2
+selected = 0
+allow_reselect = true
+item_count = 5
+popup/item_0/text = "None"
+popup/item_0/id = 0
+popup/item_1/text = "Deuteranopia (green)"
+popup/item_1/id = 1
+popup/item_2/text = "Protanopia (red)"
+popup/item_2/id = 2
+popup/item_3/text = "Tritanopia (blue)"
+popup/item_3/id = 3
+popup/item_4/text = "Achromatopsia (all)"
+popup/item_4/id = 4
+
+[node name="Control" type="Control" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/Accessibility settings"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/Accessibility settings"]
+layout_mode = 2
+text = "text size:"
+
+[node name="HSlider" type="HSlider" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/Accessibility settings"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+max_value = 40.0
+rounded = true
+
+[node name="buttens" type="HBoxContainer" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 50
+
+[node name="quit" type="Button" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/buttens"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_y1m1a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_y1m1a")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5gssk")
+
+[node name="save" type="Button" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/buttens"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_4t0bi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4t0bi")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1dbqd")
+
+[node name="settings" type="Button" parent="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/buttens"]
+editor_description = "so like, basicly a back butten"
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_ooism")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ooism")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qp34s")
+
+[node name="AbilitiesMenu" type="MarginContainer" parent="popup menu"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popup menu/AbilitiesMenu"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+texture = ExtResource("2_fqvwy")
+region_rect = Rect2(10, 10, 150, 150)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="AbilitiesMainUI" type="HBoxContainer" parent="popup menu/AbilitiesMenu/NinePatchRect"]
+visible = false
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+script = ExtResource("12_ve7rr")
+
+[node name="Main" type="VBoxContainer" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI"]
+custom_minimum_size = Vector2(290, 0)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Main"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Main"]
+layout_mode = 2
+text = "Abilities:"
+
+[node name="ScrollAbilities" type="ScrollContainer" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Main"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="AbilitiesStorage" type="VBoxContainer" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Main/ScrollAbilities"]
+layout_mode = 2
+
+[node name="NA" type="Button" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Main/ScrollAbilities/AbilitiesStorage"]
+custom_minimum_size = Vector2(275, 60)
+layout_mode = 2
+theme = SubResource("Theme_y1m1a")
+text = "N/A
+"
+
+[node name="about" type="Label" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Main"]
+layout_mode = 2
+text = "about:"
+
+[node name="discription" type="Label" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Main"]
+custom_minimum_size = Vector2(290, 0)
+layout_mode = 2
+text = "N/A"
+autowrap_mode = 2
+
+[node name="Checker" type="VBoxContainer" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Control" type="Control" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Checker"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="blue" type="Button" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Checker"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_qmbi5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qmbi5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qmbi5")
+text = "blue"
+
+[node name="red" type="Button" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Checker"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_yhgpc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yhgpc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_yhgpc")
+text = "red"
+
+[node name="green" type="Button" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Checker"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_6kq67")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6kq67")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6kq67")
+text = "green"
+
+[node name="yellow" type="Button" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Checker"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_o0vul")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_o0vul")
+theme_override_styles/normal = SubResource("StyleBoxTexture_o0vul")
+text = "yellow"
+
+[node name="Equip_Unequip" type="Button" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Checker"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 10
+theme_override_styles/hover = SubResource("StyleBoxTexture_ve7rr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ve7rr")
+theme_override_styles/normal = SubResource("StyleBoxTexture_luu0w")
+text = "Equip
+"
+
+[node name="abilities" type="Button" parent="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Checker"]
+editor_description = "a back button
+"
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_k7iid")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k7iid")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vdxtc")
+
+[node name="ItemDiscriptionMenu" type="MarginContainer" parent="popup menu"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popup menu/ItemDiscriptionMenu"]
+layout_mode = 2
+texture = ExtResource("2_fqvwy")
+region_rect = Rect2(10, 10, 150, 150)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="MainUI" type="HBoxContainer" parent="popup menu/ItemDiscriptionMenu/NinePatchRect" node_paths=PackedStringArray("DiscriptionImage", "DiscriptionLable")]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 360.0
+offset_top = -289.0
+offset_right = 636.0
+offset_bottom = 258.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("20_1dbqd")
+DiscriptionImage = NodePath("Main/HBoxContainer/TextureRect")
+DiscriptionLable = NodePath("Main/Label")
+
+[node name="Control" type="Control" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="button storage" type="VBoxContainer" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="sepratator" type="Control" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Spin" type="Button" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_xcrmj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xcrmj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_xcrmj")
+
+[node name="AntiSpin" type="Button" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_5mjpd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5mjpd")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5mjpd")
+
+[node name="BombTower" type="Button" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_uv8ux")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uv8ux")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uv8ux")
+
+[node name="SpawnTower" type="Button" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_jau4j")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jau4j")
+theme_override_styles/normal = SubResource("StyleBoxTexture_jau4j")
+
+[node name="Reset" type="Button" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_b7s6h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_b7s6h")
+theme_override_styles/normal = SubResource("StyleBoxTexture_b7s6h")
+
+[node name="AbilityBoost" type="Button" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_bere0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bere0")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bere0")
+
+[node name="Control" type="Control" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="inventory" type="Button" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_j57om")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_j57om")
+theme_override_styles/normal = SubResource("StyleBoxTexture_oeh2r")
+
+[node name="VSeparator" type="VSeparator" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI"]
+layout_mode = 2
+
+[node name="Main" type="VBoxContainer" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/Main"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/Main"]
+custom_minimum_size = Vector2(50, 100)
+layout_mode = 2
+theme_override_constants/separation = 110
+
+[node name="TextureRect" type="TextureRect" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/Main/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_4t0bi")
+stretch_mode = 2
+
+[node name="Button" type="Button" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/Main/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 10
+theme_override_styles/hover = SubResource("StyleBoxTexture_174i7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_174i7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_gc623")
+text = "USE"
+
+[node name="Label" type="Label" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/Main"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+text = "item:
+
+uhhh idk what this is LAMO uhhh it's like a flip thing? if used then it changes the dreaction on how all the abiltys work, il prob add a GIF somwhere...
+
+LORE BIT:
+tick tock switch a bot... up to right, right to down, down to left and left to up... with that done the bot has changed..."
+autowrap_mode = 2
+
+[node name="dumb ahhh thing i had too da to make this more compacated" type="Control" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/Main"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/Main/dumb ahhh thing i had too da to make this more compacated"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 380.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+stream = ExtResource("21_ooism")
+autoplay = true
+loop = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="popup menu"]
+libraries = {
+&"": SubResource("AnimationLibrary_mv4mu")
+}
+
+[connection signal="pressed" from="popup menu/Menu/main menu/controls/open or close" to="popup menu" method="_on_open_or_close_pressed"]
+[connection signal="pressed" from="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container/inventory" to="popup menu" method="_on_inventory_pressed"]
+[connection signal="pressed" from="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container/abilities" to="popup menu" method="_on_abilities_pressed"]
+[connection signal="pressed" from="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container/settings" to="popup menu" method="_on_settings_pressed"]
+[connection signal="pressed" from="popup menu/on start menu screen/open or close" to="popup menu" method="_on_open_or_close_pressed"]
+[connection signal="pressed" from="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/buttens/quit" to="popup menu" method="_on_quit_pressed"]
+[connection signal="pressed" from="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/buttens/settings" to="popup menu" method="_on_settings_pressed"]
+[connection signal="pressed" from="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Main/ScrollAbilities/AbilitiesStorage/NA" to="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI" method="_on_na_pressed"]
+[connection signal="pressed" from="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Checker/Equip_Unequip" to="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI" method="_on_equip_unequip_pressed"]
+[connection signal="pressed" from="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Checker/abilities" to="popup menu" method="_on_abilities_pressed"]
+[connection signal="pressed" from="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage/Spin" to="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI" method="_on_spin_pressed"]
+[connection signal="pressed" from="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage/AntiSpin" to="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI" method="_on_anti_spin_pressed"]
+[connection signal="pressed" from="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage/BombTower" to="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI" method="_on_bomb_tower_pressed"]
+[connection signal="pressed" from="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage/SpawnTower" to="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI" method="_on_spawn_tower_pressed"]
+[connection signal="pressed" from="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage/Reset" to="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI" method="_on_reset_pressed"]
+[connection signal="pressed" from="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage/AbilityBoost" to="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI" method="_on_ability_boost_pressed"]
+[connection signal="pressed" from="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage/inventory" to="popup menu" method="_on_inventory_pressed"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdnbqca6fgrvi"]
+
+[ext_resource type="Script" uid="uid://bive0pua6ewxm" path="res://scrips/Func scripts/HPFunc.gd" id="1_dsn43"]
+
+[node name="HPFunc" type="Node2D"]
+script = ExtResource("1_dsn43")

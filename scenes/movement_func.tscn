@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3pg1hv8pd7of"]
+
+[ext_resource type="Script" uid="uid://up4ee65djc82" path="res://scrips/Func scripts/MovementFunc.gd" id="1_c0wim"]
+[ext_resource type="Script" uid="uid://cnlvxxwtj15rj" path="res://scrips/Func scripts/player_movement_func.gd" id="2_h0tvs"]
+
+[node name="MovementFunc" type="Node2D" node_paths=PackedStringArray("PlayerMovement")]
+script = ExtResource("1_c0wim")
+PlayerMovement = NodePath("PlayerMovementFunc")
+
+[node name="PlayerMovementFunc" type="Node2D" parent="."]
+script = ExtResource("2_h0tvs")
