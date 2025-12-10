@@ -24,8 +24,9 @@ texture = ExtResource("2_dmplc")
 
 [node name="HPFunc" parent="." instance=ExtResource("3_dmplc")]
 
-[node name="AbilitiesFunc" parent="." node_paths=PackedStringArray("MovementFunc") instance=ExtResource("4_h1xxf")]
+[node name="AbilitiesFunc" parent="." node_paths=PackedStringArray("MovementFunc", "Enitiy") instance=ExtResource("4_h1xxf")]
 MovementFunc = NodePath("../MovementFunc")
+Enitiy = NodePath("..")
 
 [node name="AgroChecker" type="Area2D" parent="."]
 monitorable = false

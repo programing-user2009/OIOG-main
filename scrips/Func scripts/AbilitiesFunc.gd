@@ -1,8 +1,8 @@
 extends Node2D
 
 @export var MovementFunc: Node2D
-@export var AttackBody = Area2D
-@onready var Enitiy =  $".."
+@export var AttackBody: Area2D
+@export var Enitiy: CharacterBody2D
 
 func Dash():
 	var DashDir
@@ -26,10 +26,8 @@ func Heal():
 
 func Smash():
 	AttackBody.monitoring = true
-	AttackBody.monitorable = true
 	await get_tree().create_timer(0.15).timeout
 	AttackBody.monitoring = false
-	AttackBody.monitorable = false
 
 func none():
 	pass

@@ -5,7 +5,7 @@ var G = Global
 @export var PlayerMovement: Node2D
 @onready var AbiltyAnim = $SoulAnim
 
-func die():
+func Die():
 	print("Game Over!")
 	get_tree().quit()
 
@@ -13,6 +13,7 @@ func _ready():
 	G.Ycoordinates = 0
 	G.Xcoordinates = 0
 	G.Coordinates = "0,0"
+	$HPFunc.EntityHP = 5
 
 func _physics_process(delta: float) -> void:
 	

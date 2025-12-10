@@ -120,8 +120,9 @@ PlayerMovement = NodePath("MovementFunc")
 
 [node name="HPFunc" parent="." instance=ExtResource("2_tuyoq")]
 
-[node name="AbilitiesFunc" parent="." node_paths=PackedStringArray("MovementFunc") instance=ExtResource("2_qlg0r")]
+[node name="AbilitiesFunc" parent="." node_paths=PackedStringArray("MovementFunc", "Enitiy") instance=ExtResource("2_qlg0r")]
 MovementFunc = NodePath("../MovementFunc")
+Enitiy = NodePath("..")
 
 [node name="MovementFunc" parent="." instance=ExtResource("3_qlg0r")]
 
