@@ -6,7 +6,7 @@ extends CharacterBody2D
 var EnityX
 var EnityY
 var move_timer = 0
-var move_delay = 1
+var move_delay = 0.5
 var Player
 var directions = ["up", "down", "left", "right"]
 var current_direction : String = "idle"

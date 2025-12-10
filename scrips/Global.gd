@@ -9,6 +9,7 @@ var ItemStepedOn: String = ""
 var TemplateOn: Node = self
 var NotAbility: bool = true
 var SoulValue: String = ""
+var HPValue: int = 5
 
 var SoulColors = {
 	"left": "Blue",

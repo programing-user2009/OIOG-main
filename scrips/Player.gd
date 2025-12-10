@@ -4,6 +4,7 @@ var G = Global
 @export var PlayerAbilities: Node2D
 @export var PlayerMovement: Node2D
 @onready var AbiltyAnim = $SoulAnim
+@onready var HPAnim = $HPCheck
 
 func Die():
 	print("Game Over!")
@@ -14,6 +15,7 @@ func _ready():
 	G.Xcoordinates = 0
 	G.Coordinates = "0,0"
 	$HPFunc.EntityHP = 5
+	G.HPValue = 5
 
 func _physics_process(delta: float) -> void:
 	
@@ -48,3 +50,5 @@ func _physics_process(delta: float) -> void:
 		else:
 			Global.attempt_collect_item(G.ItemStepedOn, G.TemplateOn)
 			print("there is somthing!")
+	
+	HPAnim.play(str(Global.HPValue) + " hp")

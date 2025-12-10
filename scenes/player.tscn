@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d3xmeatdv1lf4"]
+[gd_scene load_steps=20 format=3 uid="uid://d3xmeatdv1lf4"]
 
 [ext_resource type="Texture2D" uid="uid://cv1vppfp71cqh" path="res://assets/photos/Enitiys/pixil-frame-0 (6).png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bq660dirdsld8" path="res://scrips/Player.gd" id="1_g2els"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bewy5c8a6nod7" path="res://scenes/abilities_func.tscn" id="2_qlg0r"]
 [ext_resource type="PackedScene" uid="uid://bdnbqca6fgrvi" path="res://scenes/hp_func.tscn" id="2_tuyoq"]
 [ext_resource type="PackedScene" uid="uid://b3pg1hv8pd7of" path="res://scenes/movement_func.tscn" id="3_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://dniilbydt6vak" path="res://assets/photos/Enitiys/pixil-frame-0 (53).png" id="6_fjrip"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("1_3vyb7")
@@ -58,30 +59,42 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("6_fjrip")
+region = Rect2(660, 440, 220, 220)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
-atlas = ExtResource("1_3vyb7")
-region = Rect2(440, 220, 110, 110)
+atlas = ExtResource("6_fjrip")
+region = Rect2(880, 440, 220, 220)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
-atlas = ExtResource("1_3vyb7")
-region = Rect2(440, 110, 110, 110)
+atlas = ExtResource("6_fjrip")
+region = Rect2(880, 220, 220, 220)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
-atlas = ExtResource("1_3vyb7")
-region = Rect2(440, 0, 110, 110)
+atlas = ExtResource("6_fjrip")
+region = Rect2(880, 0, 220, 220)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
-atlas = ExtResource("1_3vyb7")
-region = Rect2(110, 440, 110, 110)
+atlas = ExtResource("6_fjrip")
+region = Rect2(220, 440, 220, 220)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jej6c"]
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}],
+"loop": true,
+"name": &"1 hp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ur7pv")
 }],
 "loop": true,
-"name": &"1_4 hp",
+"name": &"2 hp",
 "speed": 5.0
 }, {
 "frames": [{
@@ -89,7 +102,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_y4r1p")
 }],
 "loop": true,
-"name": &"2_4 hp",
+"name": &"3 hp",
 "speed": 5.0
 }, {
 "frames": [{
@@ -97,7 +110,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_d2wvv")
 }],
 "loop": true,
-"name": &"3_4 hp",
+"name": &"4 hp",
 "speed": 5.0
 }, {
 "frames": [{
@@ -105,7 +118,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_3v2ag")
 }],
 "loop": true,
-"name": &"full hp",
+"name": &"5 hp",
 "speed": 5.0
 }]
 
@@ -132,9 +145,11 @@ Enitiy = NodePath("..")
 sprite_frames = SubResource("SpriteFrames_smehm")
 animation = &"up"
 
-[node name="hp_check" type="AnimatedSprite2D" parent="."]
+[node name="HPCheck" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4.64916e-06, 0)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_jej6c")
-animation = &"full hp"
+animation = &"5 hp"
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_g2els")
