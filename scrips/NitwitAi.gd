@@ -21,6 +21,7 @@ func setup(item):
 	self.position = SpawnPos
 	self.position.y = -self.position.y
 	Clone = true
+	$HPFunc.EntityHP = 5
 	print(EnityX, EnityY)
 
 func pick_random_direction():

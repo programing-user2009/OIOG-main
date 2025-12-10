@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var Entity = $".."
 @export var PlayerMovement: Node2D
+@onready var tilemap = get_tree().root.get_node("lv_0/TileMapLayer2")
+@export var HPFunc: Node2D
 const tile_size = 110
 var moving = false
 var EnityX = 0
@@ -14,6 +16,7 @@ var player_y = 0
 func _process(delta: float):
 	player_x = G.Xcoordinates
 	player_y = G.Ycoordinates
+	check_tile()
 
 func _ready() -> void:
 	EnityX = Entity.position.x / 110
@@ -65,6 +68,16 @@ func move_false() -> void:
 	else:
 		moving = false
 	DirectionOutput = Vector2(0, 0)
+
+func check_tile():
+	var tile_coords = tilemap.local_to_map($"..".global_position)
+	var tile_data = tilemap.get_cell_tile_data(tile_coords)
+	print($"..".global_position)
+	if tile_data:
+		print("works!")
+		if tile_data.get_custom_data("death point") == true:
+			print("HIT!")
+			HPFunc.take_damage(1)
 
 func Move_towards_player():
 	if player_x > EnityX:

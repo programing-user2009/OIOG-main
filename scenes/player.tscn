@@ -137,7 +137,8 @@ PlayerMovement = NodePath("MovementFunc")
 MovementFunc = NodePath("../MovementFunc")
 Enitiy = NodePath("..")
 
-[node name="MovementFunc" parent="." instance=ExtResource("3_qlg0r")]
+[node name="MovementFunc" parent="." node_paths=PackedStringArray("HPFunc") instance=ExtResource("3_qlg0r")]
+HPFunc = NodePath("../HPFunc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 

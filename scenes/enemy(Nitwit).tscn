@@ -20,7 +20,8 @@ AbilitiesFunc = NodePath("AbilitiesFunc")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_dmplc")
 
-[node name="MovementFunc" parent="." instance=ExtResource("2_33my0")]
+[node name="MovementFunc" parent="." node_paths=PackedStringArray("HPFunc") instance=ExtResource("2_33my0")]
+HPFunc = NodePath("../HPFunc")
 
 [node name="HPFunc" parent="." instance=ExtResource("3_dmplc")]
 
