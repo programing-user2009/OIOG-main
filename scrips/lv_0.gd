@@ -32,6 +32,13 @@ var Lv0Enemy = [
 	},
 ]
 
+var Lv0InteractiveTiles = [
+	{
+		"coords": Vector2(440, -660),
+		"type": "res://scenes/spike_trap.tscn"
+	}
+]
+
 func _ready() -> void:
 	Global.MIN_X = -5
 	Global.MAX_X = 12
@@ -41,4 +48,3 @@ func _ready() -> void:
 	{"pos": Vector2(-1, -4), "dir": "bottom_left"},
 ]
 	items.call("Lv0")
-	

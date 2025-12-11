@@ -72,9 +72,7 @@ func move_false() -> void:
 func check_tile():
 	var tile_coords = tilemap.local_to_map($"..".global_position)
 	var tile_data = tilemap.get_cell_tile_data(tile_coords)
-	print($"..".global_position)
 	if tile_data:
-		print("works!")
 		if tile_data.get_custom_data("death point") == true:
 			print("HIT!")
 			HPFunc.take_damage(1)

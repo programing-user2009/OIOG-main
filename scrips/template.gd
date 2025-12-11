@@ -2,7 +2,6 @@ extends Node2D
 
 @export var label: Control
 
-var anim_type
 var ItemIs = ""
 var TempOn = self
 var NotAblility = Global.NotAbility

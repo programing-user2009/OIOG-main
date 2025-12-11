@@ -55,6 +55,8 @@ func is_out_of_bounds(x: float, y: float) -> bool:
 				if x <= pos.x and y >= pos.y: return true
 			"bottom_right":
 				if x >= pos.x and y <= pos.y: return true
+			"tile":
+				if x == pos.x and y == pos.y: return true
 	return false
 
 func attempt_collect_item(item_name: String, item):

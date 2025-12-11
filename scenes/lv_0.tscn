@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d3xmeatdv1lf4" path="res://scenes/player.tscn" id="1_qhlqn"]
 [ext_resource type="Script" uid="uid://1yjbosd8b12j" path="res://scrips/lv_0.gd" id="1_s3vbu"]
-[ext_resource type="Texture2D" uid="uid://443x3mrg4mh" path="res://assets/photos/Tile Map/lv_0_floor.png" id="2_s3vbu"]
+[ext_resource type="Texture2D" uid="uid://443x3mrg4mh" path="res://assets/photos/Tile Maps/lv_0_floor.png" id="2_s3vbu"]
 [ext_resource type="PackedScene" uid="uid://cbw1fmw1bokf4" path="res://scenes/Spawning.tscn" id="3_l3q7o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l3q7o"]
@@ -958,7 +958,7 @@ sources/0 = SubResource("TileSetAtlasSource_qhlqn")
 [node name="lv_0" type="Node2D" node_paths=PackedStringArray("items")]
 texture_filter = 1
 script = ExtResource("1_s3vbu")
-items = NodePath("TileMapLayer2/items")
+items = NodePath("TileMapLayer2/Spawning")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -973,7 +973,7 @@ position = Vector2(-55, -54)
 tile_map_data = PackedByteArray("AAAEAAAAAAAEAAMAAAA=")
 tile_set = SubResource("TileSet_s3vbu")
 
-[node name="items" parent="TileMapLayer2" instance=ExtResource("3_l3q7o")]
+[node name="Spawning" parent="TileMapLayer2" instance=ExtResource("3_l3q7o")]
 position = Vector2(55, 55)
 
 [node name="Player" parent="." instance=ExtResource("1_qhlqn")]
