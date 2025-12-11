@@ -102,9 +102,7 @@ func _on_entity_detector_body_entered(body: Node2D) -> void:
 		hp.take_damage(1)
 
 func spike_wall(x, y):
-	print("works!")
 	var block = {"pos": Vector2(x / 110, y / -110), "dir": "tile"}
 	Global.blocked_zones.append(block)
-	print(Global.blocked_zones)
 	await get_tree().create_timer(3.0).timeout
 	Global.blocked_zones.erase(block)

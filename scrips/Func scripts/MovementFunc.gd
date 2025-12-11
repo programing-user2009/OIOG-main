@@ -23,13 +23,13 @@ func _ready() -> void:
 	EnityY = -Entity.position.y / 110
 	print("EnityX: " + str(EnityX), ", EnityY: " + str(EnityY))
 
-func Move(Direction):
+func Move(Direction, speed):
 	DirectionOutput = Vector2.ZERO
 	match Direction:
-		"down": DirectionOutput = Vector2(0, 1)
-		"up": DirectionOutput = Vector2(0, -1)
-		"right": DirectionOutput = Vector2(1, 0)
-		"left": DirectionOutput = Vector2(-1, 0)
+		"down": DirectionOutput = Vector2(0, speed)
+		"up": DirectionOutput = Vector2(0, -speed)
+		"right": DirectionOutput = Vector2(speed, 0)
+		"left": DirectionOutput = Vector2(-speed, 0)
 	if Entity.name == "Player":
 		PlayerMovement.try_move(Direction, DirectionOutput)
 	else:
@@ -80,16 +80,16 @@ func check_tile():
 func Move_towards_player():
 	if player_x > EnityX:
 		print("right")
-		Move("right")
+		Move("right", 1)
 	elif player_x < EnityX:
 		print("left")
-		Move("left")
+		Move("left", 1)
 	elif player_y > EnityY:
 		print("up")
-		Move("up")
+		Move("up", 1)
 	elif player_y < EnityY:
 		print("down")
-		Move("down")
+		Move("down", 1)
 	elif player_x - EnityX == 0 and player_y - EnityY == 0:
 		print("attack")
 		Entity.Attack()

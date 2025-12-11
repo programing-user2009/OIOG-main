@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://vmnpyf186hy"]
 
-[ext_resource type="Script" uid="uid://c2j46e3uvqwtn" path="res://spike_trap.gd" id="1_u4qhk"]
+[ext_resource type="Script" uid="uid://c2j46e3uvqwtn" path="res://scrips/spike_trap.gd" id="1_u4qhk"]
 [ext_resource type="Texture2D" uid="uid://upgro7kwwyih" path="res://assets/photos/Tile Maps/pixil-frame-0 (52).png" id="2_adao6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_prmpu"]

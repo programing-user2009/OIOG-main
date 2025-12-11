@@ -22,22 +22,22 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("Down"):
 		if PlayerMovement.DirectionOutput == Vector2.ZERO:
 			AbiltyAnim.play("down")
-		PlayerMovement.Move("down")
+		PlayerMovement.Move("down", 1)
 	
 	elif Input.is_action_just_pressed("Up"):
 		if PlayerMovement.DirectionOutput == Vector2.ZERO:
 			AbiltyAnim.play("up")
-		PlayerMovement.Move("up")
+		PlayerMovement.Move("up", 1)
 	
 	elif Input.is_action_just_pressed("Right"):
 		if PlayerMovement.DirectionOutput == Vector2.ZERO:
 			AbiltyAnim.play("right")
-		PlayerMovement.Move("right")
+		PlayerMovement.Move("right", 1)
 	
 	elif Input.is_action_just_pressed("Left"):
 		if PlayerMovement.DirectionOutput == Vector2.ZERO:
 			AbiltyAnim.play("left")
-		PlayerMovement.Move("left")
+		PlayerMovement.Move("left", 1)
 	
 	elif Input.is_action_just_pressed("UseAbilty"):
 		print("using ability: " + str(G.WhatAbilities(G.SoulValue)))

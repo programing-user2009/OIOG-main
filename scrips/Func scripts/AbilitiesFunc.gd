@@ -5,18 +5,7 @@ extends Node2D
 @export var Enitiy: CharacterBody2D
 
 func Dash():
-	var DashDir
-	match(Global.get_direction_from_color("Blue")):
-		"left":
-			DashDir = Vector2(-2, 0)
-		"right":
-			DashDir = Vector2(2, 0)
-		"up":
-			DashDir = Vector2(0, -2)
-		"down":
-			DashDir = Vector2(0, 2)
-	MovementFunc.DirectionOutput = DashDir
-	MovementFunc.Move(Global.get_direction_from_color("Blue"))
+	MovementFunc.Move(Global.get_direction_from_color("Blue"), 2)
 
 func Placement():
 	pass
