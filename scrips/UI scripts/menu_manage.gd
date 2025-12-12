@@ -25,8 +25,8 @@ func _ready():
 	in_menu_buttons = [back_settings_screen, save_settings_screen, quit_settings_screen, play_menu_screen, inventory_menu_open, powers_menu_screen, setting_menu_screen]
 	toggle_popupmenu_buttons = [open_menu_screen, closed_menu_screen]
 
-func _process(delta):
-	update_butten_scale()
+#func _process(delta):
+	#update_butten_scale()
 
 func update_butten_scale():
 	for button in in_menu_buttons:

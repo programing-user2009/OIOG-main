@@ -13,9 +13,9 @@ var HPValue: int = 5
 
 var SoulColors = {
 	"left": "Blue",
-	"right": "Red",
-	"down": "Yellow",
 	"up": "Green",
+	"right": "Red",
+	"down": "Yellow"
 }
 
 var Abilities = {
@@ -67,9 +67,9 @@ func attempt_collect_item(item_name: String, item):
 			item.hide_item(ItemStepedOn)
 			emit_signal("NewAcquiredAbilities", item_name, key)
 			return
-		if NotAbility:
-			print("uhhhhh oh man...")
-			item.hide_item(ItemStepedOn)
+	if Abilities != null:
+		print("uhhhhh oh man...")
+		item.hide_item(ItemStepedOn)
 	print("Item not found in Abilities:", item_name)
 
 func get_direction_from_color(color: String) -> String:
@@ -95,3 +95,18 @@ func attempt_equip_item(item_name: String) -> String:
 
 	print("Item not found:", item_name)
 	return "N/A"
+	
+func rotate_soul_colors(SoulColor: Dictionary, clockwise: bool) -> Dictionary:
+	var keys = SoulColor.keys()
+	var size = keys.size()
+	var new_dict := {}
+	for i in 4:
+		var from_index
+		if clockwise:
+			from_index = (i - 1) % 4
+		else:
+			from_index = (i + 1) % 4
+
+		new_dict[keys[i]] = SoulColor[keys[from_index]]
+	print(new_dict)
+	return new_dict

@@ -27,7 +27,7 @@ var Lv0Items = [
 
 var Lv0Enemy = [
 	{
-		"coords": Vector2(440, -550), 
+		"coords": Vector2(770, -990), 
 		"type": "res://scenes/enemy(nitwit).tscn"
 	},
 ]
@@ -35,6 +35,58 @@ var Lv0Enemy = [
 var Lv0InteractiveTiles = [
 	{
 		"coords": Vector2(440, -660),
+		"type": "res://scenes/spike_trap.tscn"
+	},
+	{
+		"coords": Vector2(550, -660),
+		"type": "res://scenes/spike_trap.tscn"
+	},
+	{
+		"coords": Vector2(660, -660),
+		"type": "res://scenes/spike_trap.tscn"
+	},
+	{
+		"coords": Vector2(770, -660),
+		"type": "res://scenes/spike_trap.tscn"
+	},
+	{
+		"coords": Vector2(880, -660),
+		"type": "res://scenes/spike_trap.tscn"
+	},
+	{
+		"coords": Vector2(990, -660),
+		"type": "res://scenes/spike_trap.tscn"
+	},
+	{
+		"coords": Vector2(1100, -660),
+		"type": "res://scenes/spike_trap.tscn"
+	},
+	{
+		"coords": Vector2(440, -770),
+		"type": "res://scenes/spike_trap.tscn"
+	},
+	{
+		"coords": Vector2(550, -770),
+		"type": "res://scenes/spike_trap.tscn"
+	},
+	{
+		"coords": Vector2(660, -770),
+		"type": "res://scenes/spike_trap.tscn"
+	},
+	{
+		"coords": Vector2(770, -770),
+		"type": "res://scenes/spike_trap.tscn"
+	},
+	{
+		"coords": Vector2(880, -770),
+		"type": "res://scenes/spike_trap.tscn"
+	},
+	{
+		"coords": Vector2(990, -770),
+		"type": "res://scenes/spike_trap.tscn"
+	},
+	{
+		"coords": Vector2(1100, -770),
 		"type": "res://scenes/spike_trap.tscn"
 	}
 ]

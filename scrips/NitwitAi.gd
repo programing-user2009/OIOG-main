@@ -37,7 +37,7 @@ func _process(delta):
 		move_timer = 0
 		if not AgroState:
 			print("moving normal")
-			MovementFunc.Move(pick_random_direction())
+			MovementFunc.Move(pick_random_direction(), 1)
 		else:
 			print("moving agro")
 			MovementFunc.Move_towards_player()

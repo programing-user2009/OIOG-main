@@ -8,46 +8,30 @@
 [ext_resource type="PackedScene" uid="uid://b3pg1hv8pd7of" path="res://scenes/movement_func.tscn" id="3_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://dniilbydt6vak" path="res://assets/photos/Enitiys/pixil-frame-0 (53).png" id="6_fjrip"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
-atlas = ExtResource("1_3vyb7")
-region = Rect2(330, 0, 110, 110)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
 atlas = ExtResource("1_3vyb7")
 region = Rect2(220, 0, 110, 110)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
-atlas = ExtResource("1_3vyb7")
-region = Rect2(110, 0, 110, 110)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
 atlas = ExtResource("1_3vyb7")
 region = Rect2(0, 0, 110, 110)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(110, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(330, 0, 110, 110)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_smehm"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dqkch")
-}],
-"loop": true,
-"name": &"down",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qlg0r")
 }],
 "loop": true,
-"name": &"left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tuyoq")
-}],
-"loop": true,
-"name": &"right",
+"name": &"Blue",
 "speed": 5.0
 }, {
 "frames": [{
@@ -55,7 +39,23 @@ animations = [{
 "texture": SubResource("AtlasTexture_fjrip")
 }],
 "loop": true,
-"name": &"up",
+"name": &"Green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}],
+"loop": true,
+"name": &"Red",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}],
+"loop": true,
+"name": &"Yellow",
 "speed": 5.0
 }]
 
@@ -133,9 +133,10 @@ PlayerMovement = NodePath("MovementFunc")
 
 [node name="HPFunc" parent="." instance=ExtResource("2_tuyoq")]
 
-[node name="AbilitiesFunc" parent="." node_paths=PackedStringArray("MovementFunc", "Enitiy") instance=ExtResource("2_qlg0r")]
+[node name="AbilitiesFunc" parent="." node_paths=PackedStringArray("MovementFunc", "Enitiy", "HPFunc") instance=ExtResource("2_qlg0r")]
 MovementFunc = NodePath("../MovementFunc")
 Enitiy = NodePath("..")
+HPFunc = NodePath("../HPFunc")
 
 [node name="MovementFunc" parent="." node_paths=PackedStringArray("HPFunc") instance=ExtResource("3_qlg0r")]
 HPFunc = NodePath("../HPFunc")
@@ -144,7 +145,7 @@ HPFunc = NodePath("../HPFunc")
 
 [node name="SoulAnim" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_smehm")
-animation = &"up"
+animation = &"Yellow"
 
 [node name="HPCheck" type="AnimatedSprite2D" parent="."]
 position = Vector2(-4.64916e-06, 0)

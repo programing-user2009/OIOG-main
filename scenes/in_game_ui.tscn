@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://bixe061dkl17"]
+[gd_scene load_steps=79 format=3 uid="uid://bixe061dkl17"]
 
 [ext_resource type="Script" uid="uid://dgh4iu306f3ej" path="res://scrips/UI scripts/menu_manage.gd" id="1_276nr"]
 [ext_resource type="Texture2D" uid="uid://bj5flqxl4w0h8" path="res://assets/photos/create_UI/pixil-frame-0 (10).png" id="2_fqvwy"]
@@ -21,18 +21,12 @@
 [ext_resource type="Texture2D" uid="uid://bila4t45k8ixr" path="res://assets/photos/items/pixil-frame-0 (42).png" id="13_yhgpc"]
 [ext_resource type="Script" uid="uid://clgjeutvvj7ir" path="res://scrips/UI scripts/ItemDisciptionUI.gd" id="20_1dbqd"]
 [ext_resource type="VideoStream" uid="uid://bc2b3pqe4yq5s" path="res://assets/photos/items/ItemVideos/Fallen_Kingdom__-_A_Minecraft_Parody_of_Coldplays_Viva_la_Vida_Music_Video.ogv" id="21_ooism"]
+[ext_resource type="Script" uid="uid://drjncfql1esqr" path="res://scenes/tile_movement_counter.gd" id="22_qmbi5"]
+[ext_resource type="Texture2D" uid="uid://c7esfbqkhms4i" path="res://assets/photos/create_UI/pixil-frame-0 (54).png" id="22_qp34s"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_huati"]
 texture = ExtResource("4_ria60")
 region_rect = Rect2(20, 0, 110, 10)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a45jx"]
-texture = ExtResource("3_fqvwy")
-region_rect = Rect2(20, 20, 150, 150)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jlb72"]
-texture = ExtResource("2_fqvwy")
-region_rect = Rect2(520, 10, 150, 150)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yjjyl"]
 texture = ExtResource("5_qinws")
@@ -169,6 +163,9 @@ texture = ExtResource("13_mv4mu")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oeh2r"]
 texture = ExtResource("12_gxplc")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ooism"]
+bg_color = Color(0.529412, 0.529412, 0.529412, 0.156863)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_174i7"]
 texture = ExtResource("3_fqvwy")
@@ -946,17 +943,35 @@ _data = {
 &"open_SettingsMenu": SubResource("Animation_mv4mu")
 }
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j2mmc"]
+texture = ExtResource("22_qp34s")
+region_rect = Rect2(0, 0, 220, 220)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6fxys"]
+texture = ExtResource("22_qp34s")
+region_rect = Rect2(220, 0, 220, 220)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sb4ny"]
+texture = ExtResource("22_qp34s")
+region_rect = Rect2(220, 220, 220, 220)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wbtt2"]
+texture = ExtResource("22_qp34s")
+region_rect = Rect2(0, 220, 220, 220)
+
 [node name="In_Game_UI" type="Control"]
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 
-[node name="popup menu" type="MarginContainer" parent="." node_paths=PackedStringArray("menu_screen", "menu_screen_showing", "settings_menu_screen", "abilities_menu_screen", "inventory_menu_screen", "open_menu_screen", "closed_menu_screen", "play_menu_screen", "inventory_menu_open", "powers_menu_screen", "setting_menu_screen", "quit_settings_screen", "save_settings_screen", "back_settings_screen")]
+[node name="popup menu" type="MarginContainer" parent="." node_paths=PackedStringArray("menu_screen", "menu_screen_showing", "settings_menu_screen", "abilities_menu_screen", "inventory_menu_screen", "open_menu_screen", "closed_menu_screen", "inventory_menu_open", "powers_menu_screen", "setting_menu_screen", "quit_settings_screen", "save_settings_screen", "back_settings_screen")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -976,7 +991,6 @@ abilities_menu_screen = NodePath("AbilitiesMenu")
 inventory_menu_screen = NodePath("ItemDiscriptionMenu")
 open_menu_screen = NodePath("on start menu screen/open or close")
 closed_menu_screen = NodePath("Menu/main menu/controls/open or close")
-play_menu_screen = NodePath("Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container/play")
 inventory_menu_open = NodePath("Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container/inventory")
 powers_menu_screen = NodePath("Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container/abilities")
 setting_menu_screen = NodePath("Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container/settings")
@@ -1041,15 +1055,6 @@ custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 theme_override_constants/separation = 30
 alignment = 1
-
-[node name="play" type="Button" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container"]
-custom_minimum_size = Vector2(85, 85)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/hover = SubResource("StyleBoxTexture_a45jx")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_a45jx")
-theme_override_styles/normal = SubResource("StyleBoxTexture_jlb72")
 
 [node name="inventory" type="Button" parent="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container"]
 custom_minimum_size = Vector2(85, 85)
@@ -1194,7 +1199,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="NinePatchRect" type="NinePatchRect" parent="popup menu/SettingsMenu"]
-custom_minimum_size = Vector2(800, 500)
+visible = false
 layout_mode = 2
 texture = ExtResource("2_fqvwy")
 region_rect = Rect2(10, 10, 150, 150)
@@ -1204,6 +1209,7 @@ patch_margin_right = 30
 patch_margin_bottom = 30
 
 [node name="VBoxContainer" type="VBoxContainer" parent="popup menu/SettingsMenu/NinePatchRect"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(800, 500)
 layout_mode = 0
 offset_right = 40.0
@@ -1487,7 +1493,7 @@ patch_margin_top = 30
 patch_margin_right = 30
 patch_margin_bottom = 30
 
-[node name="MainUI" type="HBoxContainer" parent="popup menu/ItemDiscriptionMenu/NinePatchRect" node_paths=PackedStringArray("DiscriptionImage", "DiscriptionLable")]
+[node name="MainUI" type="HBoxContainer" parent="popup menu/ItemDiscriptionMenu/NinePatchRect" node_paths=PackedStringArray("DiscriptionImage", "DiscriptionLable", "AmountLable")]
 visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
@@ -1495,14 +1501,14 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 360.0
-offset_top = -289.0
 offset_right = 636.0
-offset_bottom = 258.0
+offset_bottom = 547.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("20_1dbqd")
 DiscriptionImage = NodePath("Main/HBoxContainer/TextureRect")
 DiscriptionLable = NodePath("Main/Label")
+AmountLable = NodePath("Main/HBoxContainer/CenterContainer/AmountLabel")
 
 [node name="Control" type="Control" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI"]
 custom_minimum_size = Vector2(10, 0)
@@ -1584,14 +1590,27 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/Main"]
 custom_minimum_size = Vector2(50, 100)
 layout_mode = 2
-theme_override_constants/separation = 110
+theme_override_constants/separation = 25
 
 [node name="TextureRect" type="TextureRect" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/Main/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("8_4t0bi")
 stretch_mode = 2
 
-[node name="Button" type="Button" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/Main/HBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/Main/HBoxContainer"]
+layout_mode = 2
+
+[node name="AmountLabel" type="Label" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/Main/HBoxContainer/CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ooism")
+text = "Amount:
+5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UseButton" type="Button" parent="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/Main/HBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -1637,6 +1656,140 @@ libraries = {
 &"": SubResource("AnimationLibrary_mv4mu")
 }
 
+[node name="TileMovementCounter" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(120, 430)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("22_qmbi5")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TileMovementCounter"]
+layout_mode = 2
+texture = ExtResource("2_fqvwy")
+region_rect = Rect2(10, 10, 150, 150)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TileMovementCounter"]
+custom_minimum_size = Vector2(0, 330)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="TileMovementCounter/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="BlueMain" type="VBoxContainer" parent="TileMovementCounter/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="TileMovementCounter/VBoxContainer/BlueMain"]
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="TileMovementCounter/VBoxContainer/BlueMain/Control"]
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 0
+offset_right = 61.0
+offset_bottom = 43.0
+rotation = 3.14159
+pivot_offset = Vector2(44, 44)
+theme_override_styles/panel = SubResource("StyleBoxTexture_j2mmc")
+
+[node name="Label" type="Label" parent="TileMovementCounter/VBoxContainer/BlueMain"]
+layout_mode = 2
+text = "blue: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GreenMain" type="VBoxContainer" parent="TileMovementCounter/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="TileMovementCounter/VBoxContainer/GreenMain"]
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="TileMovementCounter/VBoxContainer/GreenMain/Control"]
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 0
+offset_right = 61.0
+offset_bottom = 43.0
+rotation = 3.14159
+pivot_offset = Vector2(44, 44)
+theme_override_styles/panel = SubResource("StyleBoxTexture_6fxys")
+
+[node name="Label2" type="Label" parent="TileMovementCounter/VBoxContainer/GreenMain"]
+layout_mode = 2
+text = "green: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RedMain" type="VBoxContainer" parent="TileMovementCounter/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="TileMovementCounter/VBoxContainer/RedMain"]
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="TileMovementCounter/VBoxContainer/RedMain/Control"]
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 0
+offset_right = 61.0
+offset_bottom = 43.0
+rotation = 3.14159
+pivot_offset = Vector2(44, 44)
+theme_override_styles/panel = SubResource("StyleBoxTexture_sb4ny")
+
+[node name="Label4" type="Label" parent="TileMovementCounter/VBoxContainer/RedMain"]
+layout_mode = 2
+text = "red: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="YellowMain" type="VBoxContainer" parent="TileMovementCounter/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="TileMovementCounter/VBoxContainer/YellowMain"]
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="TileMovementCounter/VBoxContainer/YellowMain/Control"]
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 0
+offset_right = 61.0
+offset_bottom = 43.0
+rotation = 3.14159
+pivot_offset = Vector2(44, 44)
+theme_override_styles/panel = SubResource("StyleBoxTexture_wbtt2")
+
+[node name="Label3" type="Label" parent="TileMovementCounter/VBoxContainer/YellowMain"]
+layout_mode = 2
+text = "yelow: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="TileMovementCounter/VBoxContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="Timer" type="Timer" parent="TileMovementCounter"]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="pressed" from="popup menu/Menu/main menu/controls/open or close" to="popup menu" method="_on_open_or_close_pressed"]
 [connection signal="pressed" from="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container/inventory" to="popup menu" method="_on_inventory_pressed"]
 [connection signal="pressed" from="popup menu/Menu/main menu/controls/NinePatchRect/menu items/VBoxContainer/button container/abilities" to="popup menu" method="_on_abilities_pressed"]
@@ -1654,3 +1807,5 @@ libraries = {
 [connection signal="pressed" from="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage/Reset" to="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI" method="_on_reset_pressed"]
 [connection signal="pressed" from="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage/AbilityBoost" to="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI" method="_on_ability_boost_pressed"]
 [connection signal="pressed" from="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage/inventory" to="popup menu" method="_on_inventory_pressed"]
+[connection signal="pressed" from="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/Main/HBoxContainer/UseButton" to="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI" method="_on_use_button_pressed"]
+[connection signal="timeout" from="TileMovementCounter/Timer" to="TileMovementCounter" method="_on_timer_timeout"]

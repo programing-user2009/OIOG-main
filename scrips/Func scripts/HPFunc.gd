@@ -17,3 +17,10 @@ func take_damage(amount):
 
 func _on_timer_timeout() -> void:
 	invincibility = false
+
+func heal(amount):
+		if EntityHP < 5:
+			EntityHP += amount
+			$Timer.start()
+		if Entity.name == "Player":
+			Global.HPValue = EntityHP
