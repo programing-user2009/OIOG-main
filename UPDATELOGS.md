@@ -1,3 +1,4 @@
+pls go to code! it will look less like a blob of text :>>
 updates for OIOG here :))
 0.3.15.2 start (update will work like: full release.patch.bugfix.trial)
 0.3.15.2
@@ -18,4 +19,7 @@ updates for OIOG here :))
 -new game macanic!
    -now can change the colors aka drection to match
 -more ui!
+-enemys will not spawn in this verion
+0.3.17.4
+-game macanic now works!
 -enemys will not spawn in this verion
