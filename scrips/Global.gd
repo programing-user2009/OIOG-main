@@ -12,10 +12,10 @@ var SoulValue: String = ""
 var HPValue: int = 5
 
 var SoulColors = {
-	"left": "Blue",
-	"up": "Green",
-	"right": "Red",
-	"down": "Yellow"
+	"left":  { "color": "Blue", "count": 0 },
+	"up":    { "color": "Green", "count": 0 },
+	"right": { "color": "Red", "count": 0 },
+	"down":  { "color": "Yellow", "count": 0 }
 }
 
 var Abilities = {
@@ -34,11 +34,43 @@ var MIN_Y = 0
 var MAX_Y = 0
 var blocked_zones = []
 
-func DirectionToSoulConv(direction: String) -> String:
-	return SoulColors.get(direction, "none")
-
 func WhatAbilities(color: String) -> String:
 	return EquipedAbilities.get(color, "none")
+
+func SoulCounter(drection):
+	SoulColors[drection].count += 1
+	if drection == "left" and SoulColors["right"].count > 0:
+		SoulColors[drection].count -= 1
+		SoulColors["right"].count -= 1
+	if drection == "right" and SoulColors["left"].count > 0:
+		SoulColors[drection].count -= 1
+		SoulColors["left"].count -= 1
+	if drection == "up" and SoulColors["down"].count > 0:
+		SoulColors[drection].count -= 1
+		SoulColors["down"].count -= 1
+	if drection == "down" and SoulColors["up"].count > 0:
+		SoulColors[drection].count -= 1
+		SoulColors["up"].count -= 1
+
+func UseSoul(color: String, amount: int):
+	var dir = PowerToColor(color, true)
+	var amount2 = amount
+	amount -= dir
+	if amount > 0:
+		print("not enough points!")
+		return 0
+	else:
+		var point = PowerToColor(color, false)
+		SoulColors[point].count -= amount2
+
+func PowerToColor(color: String, ReturnCountOrDir):
+	for dir in SoulColors:
+		if SoulColors[dir]["color"] == color:
+			if ReturnCountOrDir:
+				return SoulColors[dir]["count"]
+			else:
+				return dir
+	return 0 
 
 func is_out_of_bounds(x: float, y: float) -> bool:
 	if x <= MIN_X or x >= MAX_X or y <= MIN_Y or y >= MAX_Y:

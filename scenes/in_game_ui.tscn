@@ -1730,9 +1730,9 @@ rotation = 3.14159
 pivot_offset = Vector2(44, 44)
 theme_override_styles/panel = SubResource("StyleBoxTexture_6fxys")
 
-[node name="Label2" type="Label" parent="TileMovementCounter/VBoxContainer/GreenMain"]
+[node name="Label3" type="Label" parent="TileMovementCounter/VBoxContainer/GreenMain"]
 layout_mode = 2
-text = "green: 0"
+text = "yelow: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1776,9 +1776,9 @@ rotation = 3.14159
 pivot_offset = Vector2(44, 44)
 theme_override_styles/panel = SubResource("StyleBoxTexture_wbtt2")
 
-[node name="Label3" type="Label" parent="TileMovementCounter/VBoxContainer/YellowMain"]
+[node name="Label2" type="Label" parent="TileMovementCounter/VBoxContainer/YellowMain"]
 layout_mode = 2
-text = "yelow: 0"
+text = "green: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 

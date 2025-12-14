@@ -6,18 +6,24 @@ extends Node2D
 @export var HPFunc: Node2D
 
 func Dash():
-	MovementFunc.Move(Global.get_direction_from_color("Blue"), 2)
+	var count = Global.UseSoul("Blue", 2)
+	if not count == 0:
+		MovementFunc.Move(Global.PowerToColor("Blue", false), 2)
 
 func Placement():
 	pass
 
 func Heal():
-	HPFunc.heal(1)
+	var count = Global.UseSoul("Green", 1)
+	if not count == 0:
+		HPFunc.heal(1)
 
 func Smash():
-	AttackBody.monitoring = true
-	await get_tree().create_timer(0.15).timeout
-	AttackBody.monitoring = false
+	var count = Global.UseSoul("Red", 4)
+	if not count == 0:
+		AttackBody.monitoring = true
+		await get_tree().create_timer(0.15).timeout
+		AttackBody.monitoring = false
 
 func none():
 	pass

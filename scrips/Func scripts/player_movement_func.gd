@@ -19,5 +19,5 @@ func try_move(Direction, DirectionOutput) -> void:
 	
 	G.Xcoordinates = next_x
 	G.Ycoordinates = next_y
-	G.SoulValue = G.DirectionToSoulConv(Direction)
+	G.SoulValue = G.SoulColors[Direction].color
 	return $"..".move()

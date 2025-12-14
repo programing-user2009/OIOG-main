@@ -21,22 +21,26 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("Down"):
 		if PlayerMovement.DirectionOutput == Vector2.ZERO:
-			AbiltyAnim.play(G.DirectionToSoulConv("down"))
+			AbiltyAnim.play(G.SoulColors["down"].color)
+			G.SoulCounter("down")
 		PlayerMovement.Move("down", 1)
 	
 	elif Input.is_action_just_pressed("Up"):
 		if PlayerMovement.DirectionOutput == Vector2.ZERO:
-			AbiltyAnim.play(G.DirectionToSoulConv("up"))
+			AbiltyAnim.play(G.SoulColors["up"].color)
+			G.SoulCounter("up")
 		PlayerMovement.Move("up", 1)
 	
 	elif Input.is_action_just_pressed("Right"):
 		if PlayerMovement.DirectionOutput == Vector2.ZERO:
-			AbiltyAnim.play(G.DirectionToSoulConv("right"))
+			AbiltyAnim.play(G.SoulColors["right"].color)
+			G.SoulCounter("right")
 		PlayerMovement.Move("right", 1)
 	
 	elif Input.is_action_just_pressed("Left"):
 		if PlayerMovement.DirectionOutput == Vector2.ZERO:
-			AbiltyAnim.play(G.DirectionToSoulConv("left"))
+			AbiltyAnim.play(G.SoulColors["left"].color)
+			G.SoulCounter("left")
 		PlayerMovement.Move("left", 1)
 	
 	elif Input.is_action_just_pressed("UseAbilty"):
