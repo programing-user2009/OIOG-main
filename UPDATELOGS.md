@@ -23,3 +23,7 @@ updates for OIOG here :))
 0.3.17.4
 -game macanic now works!
 -enemys will not spawn in this verion
+0.4.32.2
+-new enemys!
+-Dev mode added! (deactvated tho)
+-landmine!
