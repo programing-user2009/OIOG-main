@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dglouqgtntnti"]
+[gd_scene load_steps=9 format=3 uid="uid://dglouqgtntnti"]
 
-[ext_resource type="Script" uid="uid://boa2jo8gohd4r" path="res://scrips/NitwitAi.gd" id="1_m8k3k"]
+[ext_resource type="Script" uid="uid://boa2jo8gohd4r" path="res://scrips/Spawning scripts/NitwitAi.gd" id="1_m8k3k"]
 [ext_resource type="PackedScene" uid="uid://b3pg1hv8pd7of" path="res://scenes/movement_func.tscn" id="2_33my0"]
 [ext_resource type="Texture2D" uid="uid://c06yanjd22tfd" path="res://assets/photos/Enitiys/pixil-frame-0 (47).png" id="2_dmplc"]
 [ext_resource type="PackedScene" uid="uid://bdnbqca6fgrvi" path="res://scenes/hp_func.tscn" id="3_dmplc"]
 [ext_resource type="PackedScene" uid="uid://bewy5c8a6nod7" path="res://scenes/abilities_func.tscn" id="4_h1xxf"]
+[ext_resource type="PackedScene" uid="uid://ba0src8irkurg" path="res://scenes/dev_checks.tscn" id="6_dmplc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eq8cj"]
 radius = 330.0
@@ -12,7 +13,8 @@ radius = 330.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_ut0q6"]
 radius = 55.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" node_paths=PackedStringArray("MovementFunc", "AbilitiesFunc")]
+[node name="Enemy(nitwit)" type="CharacterBody2D" node_paths=PackedStringArray("MovementFunc", "AbilitiesFunc")]
+texture_filter = 1
 script = ExtResource("1_m8k3k")
 MovementFunc = NodePath("MovementFunc")
 AbilitiesFunc = NodePath("AbilitiesFunc")
@@ -37,6 +39,10 @@ shape = SubResource("CircleShape2D_eq8cj")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ut0q6")
+
+[node name="Dev checks" parent="." node_paths=PackedStringArray("HP", "Main") instance=ExtResource("6_dmplc")]
+HP = NodePath("../HPFunc")
+Main = NodePath("..")
 
 [connection signal="body_entered" from="AgroChecker" to="." method="_on_agro_checker_body_entered"]
 [connection signal="body_exited" from="AgroChecker" to="." method="_on_agro_checker_body_exited"]

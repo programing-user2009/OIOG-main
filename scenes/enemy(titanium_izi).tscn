@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://dvy7okumfpjki"]
+
+[ext_resource type="Script" uid="uid://bcek22t0bp7bg" path="res://scrips/Spawning scripts/enemy(titanium_izi).gd" id="1_l22dv"]
+[ext_resource type="Texture2D" uid="uid://d2tlbxoy7a7bs" path="res://assets/photos/Enitiys/pixil-frame-0 (50).png" id="2_krh01"]
+[ext_resource type="PackedScene" uid="uid://bewy5c8a6nod7" path="res://scenes/abilities_func.tscn" id="3_kgiyg"]
+[ext_resource type="PackedScene" uid="uid://bdnbqca6fgrvi" path="res://scenes/hp_func.tscn" id="4_as8dq"]
+[ext_resource type="PackedScene" uid="uid://b3pg1hv8pd7of" path="res://scenes/movement_func.tscn" id="5_try1o"]
+[ext_resource type="PackedScene" uid="uid://ba0src8irkurg" path="res://scenes/dev_checks.tscn" id="6_krh01"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ug7p"]
+radius = 110.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l22dv"]
+size = Vector2(110, 110)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k1nx0"]
+radius = 55.0
+
+[node name="enemy(Titanium_Izi)" type="CharacterBody2D" node_paths=PackedStringArray("MovementFunc", "AbilitiesFunc")]
+texture_filter = 1
+script = ExtResource("1_l22dv")
+MovementFunc = NodePath("MovementFunc")
+AbilitiesFunc = NodePath("AbilitiesFunc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_krh01")
+
+[node name="MovementFunc" parent="." node_paths=PackedStringArray("HPFunc") instance=ExtResource("5_try1o")]
+HPFunc = NodePath("../HPFunc")
+
+[node name="HPFunc" parent="." instance=ExtResource("4_as8dq")]
+
+[node name="AbilitiesFunc" parent="." node_paths=PackedStringArray("MovementFunc", "Enitiy", "HPFunc") instance=ExtResource("3_kgiyg")]
+MovementFunc = NodePath("../MovementFunc")
+Enitiy = NodePath("..")
+HPFunc = NodePath("../HPFunc")
+
+[node name="HealCheck" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealCheck"]
+shape = SubResource("CircleShape2D_8ug7p")
+
+[node name="Heal Staff" type="Area2D" parent="."]
+
+[node name="area" type="CollisionShape2D" parent="Heal Staff"]
+scale = Vector2(3, 1)
+shape = SubResource("RectangleShape2D_l22dv")
+
+[node name="area2" type="CollisionShape2D" parent="Heal Staff"]
+scale = Vector2(1, 3)
+shape = SubResource("RectangleShape2D_l22dv")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k1nx0")
+
+[node name="Dev checks" parent="." node_paths=PackedStringArray("HP", "Main") instance=ExtResource("6_krh01")]
+HP = NodePath("../HPFunc")
+Main = NodePath("..")
+
+[connection signal="body_entered" from="HealCheck" to="." method="_on_heal_check_body_entered"]
+[connection signal="body_exited" from="HealCheck" to="." method="_on_heal_check_body_exited"]
+[connection signal="body_entered" from="Heal Staff" to="." method="_on_heal_staff_body_entered"]

@@ -14,6 +14,10 @@ var player_x = 0
 var player_y = 0
 
 func _process(delta: float):
+	if Entity.name != "Player":
+		Entity.EnityX = EnityX
+		Entity.EnityY = EnityY
+	
 	player_x = G.Xcoordinates
 	player_y = G.Ycoordinates
 	check_tile()
@@ -92,4 +96,22 @@ func Move_towards_player():
 		Move("down", 1)
 	elif player_x - EnityX == 0 and player_y - EnityY == 0:
 		print("attack")
+		Entity.Attack()
+
+func Move_away_player():
+	if player_x < EnityX:
+		print("right")
+		Move("right", 1)
+		Entity.Attack()
+	elif player_x > EnityX:
+		print("left")
+		Move("left", 1)
+		Entity.Attack()
+	elif player_y < EnityY:
+		print("up")
+		Move("up", 1)
+		Entity.Attack()
+	elif player_y > EnityY:
+		print("down")
+		Move("down", 1)
 		Entity.Attack()

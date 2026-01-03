@@ -52,24 +52,25 @@ func _process(delta):
 	SpawnTower.text = str(SpawnTowerAmount)
 	Reset.text = str(ResetAmount)
 	AbilityBoost.text = str(AbilityBoostAmount)
+	ChangeUI(ItemOn)
 
 func _on_spin_pressed() -> void:
-	ChangeUI("Spin")
+	ItemOn = "Spin"
 
 func _on_anti_spin_pressed() -> void:
-	ChangeUI("Antispin")
+	ItemOn = "Antispin"
 
 func _on_bomb_tower_pressed() -> void:
-	ChangeUI("BombTower")
+	ItemOn = "BombTower"
 
 func _on_spawn_tower_pressed() -> void:
-	ChangeUI("SpawnTower")
+	ItemOn = "SpawnTower"
 
 func _on_reset_pressed() -> void:
-	ChangeUI("Reset")
+	ItemOn = "Reset"
 
 func _on_ability_boost_pressed() -> void:
-	ChangeUI("AbilityBoost")
+	ItemOn = "AbilityBoost"
 
 func ChangeUI(ChangeTo):
 	DiscriptionLable.text = ItemDiscription[ChangeTo]
@@ -78,4 +79,9 @@ func ChangeUI(ChangeTo):
 	ItemOn = ChangeTo
 
 func _on_use_button_pressed() -> void:
-	MovementChange.Rotate(ItemOn)
+	var item = ItemAmount[ItemOn]
+	if item >= 1:
+		ItemAmount[ItemOn] -= 1
+		MovementChange.Rotate(ItemOn)
+	else:
+		print("not enough item to use!")

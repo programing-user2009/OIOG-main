@@ -2,6 +2,7 @@ extends Node
 
 signal NewAcquiredAbilities(item_name, key)
 
+var DevMode: bool = true
 var Xcoordinates: int = 0
 var Ycoordinates: int = 0
 var Coordinates: String = ""
@@ -14,7 +15,7 @@ var HPValue: int = 5
 var SoulColors = {
 	"left":  { "color": "Blue", "count": 0 },
 	"up":    { "color": "Green", "count": 0 },
-	"right": { "color": "Red", "count": 0 },
+	"right": { "color": "Red", "count": 1000 },
 	"down":  { "color": "Yellow", "count": 0 }
 }
 
@@ -25,8 +26,16 @@ var Abilities = {
 	"Red": "Smash"
 }
 
-var AcquiredAbilities = {}
-var EquipedAbilities = {}
+var AcquiredAbilities = {
+	
+}
+
+var EquipedAbilities = {
+	"Blue": "Dash",
+	"Yellow": "Placement",
+	"Green": "Heal",
+	"Red": "Smash"
+}
 
 var MIN_X = 0
 var MAX_X = 0
@@ -52,18 +61,28 @@ func SoulCounter(drection):
 		SoulColors[drection].count -= 1
 		SoulColors["up"].count -= 1
 
-func UseSoul(color: String, amount: int):
-	var dir = PowerToColor(color, true)
-	var amount2 = amount
-	amount -= dir
-	if amount > 0:
-		print("not enough points!")
-		return 0
-	else:
-		var point = PowerToColor(color, false)
-		SoulColors[point].count -= amount2
+func UseSoul(color: String, amount: int, SingleOrAll: String):
+	var count = PowerToColor(color, true)
+	count -= amount
+	if SingleOrAll == "Single":
+		var amount2 = amount
+		if count < 0:
+			print("not enough points!")
+			return 0
+		else:
+			var point = PowerToColor(color, false)
+			SoulColors[point].count -= amount2
+			return amount
+	if SingleOrAll == "All":
+		if count < 0:
+			print("not enough points!")
+			return 0
+		else:
+			var point = PowerToColor(color, false)
+			SoulColors[point].count = 0
+			return amount
 
-func PowerToColor(color: String, ReturnCountOrDir):
+func PowerToColor(color: String, ReturnCountOrDir): #True = Count, False = Dir
 	for dir in SoulColors:
 		if SoulColors[dir]["color"] == color:
 			if ReturnCountOrDir:

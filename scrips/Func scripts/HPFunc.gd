@@ -2,7 +2,12 @@ extends Node2D
 
 @onready var Entity = $".."
 var EntityHP: int
+var MaxHP: int
 var invincibility = false
+
+func _ready() -> void:
+	await get_tree().process_frame
+	MaxHP = EntityHP
 
 func take_damage(amount):
 	if invincibility == false:
@@ -18,9 +23,12 @@ func take_damage(amount):
 func _on_timer_timeout() -> void:
 	invincibility = false
 
-func heal(amount):
-		if EntityHP < 5:
+func heal(amount, SomeOrAll):
+	if EntityHP < MaxHP:
+		if SomeOrAll == "Some":
 			EntityHP += amount
-			$Timer.start()
-		if Entity.name == "Player":
-			Global.HPValue = EntityHP
+		if SomeOrAll == "All":
+			EntityHP = MaxHP
+	if Entity.name == "Player":
+		Global.HPValue = EntityHP
+		

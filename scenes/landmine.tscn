@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://50mx5aweqjod"]
+
+[ext_resource type="Script" uid="uid://dvk382det5aot" path="res://scrips/Spawning scripts/landmine.gd" id="1_vw0b7"]
+[ext_resource type="Texture2D" uid="uid://dyqg8rx3mqaa2" path="res://assets/photos/items/ItemEffects/pixil-frame-0 (43).png" id="2_1irre"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i1xba"]
+radius = 50.0899
+
+[node name="Landmine" type="Node2D"]
+script = ExtResource("1_vw0b7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1irre")
+
+[node name="SigmaBoom" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SigmaBoom"]
+shape = SubResource("CircleShape2D_i1xba")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="SigmaBoom" to="." method="_on_sigma_boom_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

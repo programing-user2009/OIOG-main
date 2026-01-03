@@ -1,12 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbw1fmw1bokf4"]
+[gd_scene load_steps=6 format=3 uid="uid://cbw1fmw1bokf4"]
 
-[ext_resource type="Script" uid="uid://cva3nyf86krkt" path="res://scrips/items_placement.gd" id="1_sj0ge"]
+[ext_resource type="Script" uid="uid://cva3nyf86krkt" path="res://scrips/Spawning scripts/items_placement.gd" id="1_sj0ge"]
+[ext_resource type="PackedScene" uid="uid://50mx5aweqjod" path="res://scenes/landmine.tscn" id="2_opwt2"]
 [ext_resource type="PackedScene" uid="uid://dhldb083v8ls" path="res://scenes/template.tscn" id="2_sj0ge"]
 [ext_resource type="PackedScene" uid="uid://dglouqgtntnti" path="res://scenes/enemy(Nitwit).tscn" id="3_trfxy"]
 [ext_resource type="PackedScene" uid="uid://vmnpyf186hy" path="res://scenes/spike_trap.tscn" id="4_elga8"]
 
 [node name="Spawning" type="Node2D"]
 script = ExtResource("1_sj0ge")
+
+[node name="Landmine" parent="." instance=ExtResource("2_opwt2")]
 
 [node name="SpikeTrap" parent="." instance=ExtResource("4_elga8")]
 

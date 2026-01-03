@@ -28,7 +28,11 @@ var Lv0Items = [
 var Lv0Enemy = [
 	{
 		"coords": Vector2(770, -990), 
-		"type": "res://scenes/enemy(nitwit).tscn"
+		"type": "res://scenes/enemy(titanium_izi).tscn"
+	},
+	{
+		"coords": Vector2(880, -990), 
+		"type": "res://scenes/enemy(Nitwit).tscn"
 	},
 ]
 
@@ -87,7 +91,7 @@ var Lv0InteractiveTiles = [
 	},
 	{
 		"coords": Vector2(1100, -770),
-		"type": "res://scenes/spike_trap.tscn"
+		"type": "res://scenes/landmine.tscn"
 	}
 ]
 

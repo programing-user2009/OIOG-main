@@ -55,4 +55,5 @@ func _physics_process(delta: float) -> void:
 			Global.attempt_collect_item(G.ItemStepedOn, G.TemplateOn)
 			print("there is somthing!")
 	
+	
 	HPAnim.play(str(Global.HPValue) + " hp")

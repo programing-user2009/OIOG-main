@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bila4t45k8ixr" path="res://assets/photos/items/pixil-frame-0 (42).png" id="13_yhgpc"]
 [ext_resource type="Script" uid="uid://clgjeutvvj7ir" path="res://scrips/UI scripts/ItemDisciptionUI.gd" id="20_1dbqd"]
 [ext_resource type="VideoStream" uid="uid://bc2b3pqe4yq5s" path="res://assets/photos/items/ItemVideos/Fallen_Kingdom__-_A_Minecraft_Parody_of_Coldplays_Viva_la_Vida_Music_Video.ogv" id="21_ooism"]
-[ext_resource type="Script" uid="uid://drjncfql1esqr" path="res://scenes/tile_movement_counter.gd" id="22_qmbi5"]
+[ext_resource type="Script" uid="uid://drjncfql1esqr" path="res://scrips/UI scripts/tile_movement_counter.gd" id="22_qmbi5"]
 [ext_resource type="Texture2D" uid="uid://c7esfbqkhms4i" path="res://assets/photos/create_UI/pixil-frame-0 (54).png" id="22_qp34s"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_huati"]
@@ -1606,7 +1606,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_ooism")
 text = "Amount:
-5"
+0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1798,6 +1798,10 @@ one_shot = true
 [connection signal="pressed" from="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/buttens/quit" to="popup menu" method="_on_quit_pressed"]
 [connection signal="pressed" from="popup menu/SettingsMenu/NinePatchRect/VBoxContainer/buttens/settings" to="popup menu" method="_on_settings_pressed"]
 [connection signal="pressed" from="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Main/ScrollAbilities/AbilitiesStorage/NA" to="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI" method="_on_na_pressed"]
+[connection signal="pressed" from="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Checker/blue" to="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI" method="_on_blue_pressed"]
+[connection signal="pressed" from="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Checker/red" to="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI" method="_on_red_pressed"]
+[connection signal="pressed" from="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Checker/green" to="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI" method="_on_green_pressed"]
+[connection signal="pressed" from="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Checker/yellow" to="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI" method="_on_yellow_pressed"]
 [connection signal="pressed" from="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Checker/Equip_Unequip" to="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI" method="_on_equip_unequip_pressed"]
 [connection signal="pressed" from="popup menu/AbilitiesMenu/NinePatchRect/AbilitiesMainUI/Checker/abilities" to="popup menu" method="_on_abilities_pressed"]
 [connection signal="pressed" from="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI/button storage/Spin" to="popup menu/ItemDiscriptionMenu/NinePatchRect/MainUI" method="_on_spin_pressed"]
